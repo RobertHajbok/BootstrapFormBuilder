@@ -191,13 +191,13 @@ namespace Links
     
         public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
         public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
-        public static readonly string jquery_3_1_1_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-3.1.1.intellisense.min.js") ? Url("jquery-3.1.1.intellisense.min.js") : Url("jquery-3.1.1.intellisense.js");
-        public static readonly string jquery_3_1_1_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-3.1.1.min.js") ? Url("jquery-3.1.1.min.js") : Url("jquery-3.1.1.js");
-        public static readonly string jquery_3_1_1_min_js = Url("jquery-3.1.1.min.js");
-        public static readonly string jquery_3_1_1_min_map = Url("jquery-3.1.1.min.map");
-        public static readonly string jquery_3_1_1_slim_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-3.1.1.slim.min.js") ? Url("jquery-3.1.1.slim.min.js") : Url("jquery-3.1.1.slim.js");
-        public static readonly string jquery_3_1_1_slim_min_js = Url("jquery-3.1.1.slim.min.js");
-        public static readonly string jquery_3_1_1_slim_min_map = Url("jquery-3.1.1.slim.min.map");
+        public static readonly string jquery_3_5_1_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-3.5.1.intellisense.min.js") ? Url("jquery-3.5.1.intellisense.min.js") : Url("jquery-3.5.1.intellisense.js");
+        public static readonly string jquery_3_5_1_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-3.5.1.min.js") ? Url("jquery-3.5.1.min.js") : Url("jquery-3.5.1.js");
+        public static readonly string jquery_3_5_1_min_js = Url("jquery-3.5.1.min.js");
+        public static readonly string jquery_3_5_1_min_map = Url("jquery-3.5.1.min.map");
+        public static readonly string jquery_3_5_1_slim_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-3.5.1.slim.min.js") ? Url("jquery-3.5.1.slim.min.js") : Url("jquery-3.5.1.slim.js");
+        public static readonly string jquery_3_5_1_slim_min_js = Url("jquery-3.5.1.slim.min.js");
+        public static readonly string jquery_3_5_1_slim_min_map = Url("jquery-3.5.1.slim.min.map");
         public static readonly string modernizr_2_8_3_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/modernizr-2.8.3.min.js") ? Url("modernizr-2.8.3.min.js") : Url("modernizr-2.8.3.js");
         public static readonly string mustache_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/mustache.min.js") ? Url("mustache.min.js") : Url("mustache.js");
         public static readonly string r_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/r.min.js") ? Url("r.min.js") : Url("r.js");
@@ -236,8 +236,8 @@ namespace Links
                 {
                     public static class Assets
                     {
-                        public const string my_form_snippets_js = "~/Scripts/app/collections/my-form-snippets.js"; 
-                        public const string snippets_js = "~/Scripts/app/collections/snippets.js"; 
+                        public static readonly string my_form_snippets_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/collections/my-form-snippets.js"); 
+                        public static readonly string snippets_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/collections/snippets.js"); 
                     }
                 }
                 public static partial class data 
@@ -250,15 +250,15 @@ namespace Links
                 {
                     public static class Assets
                     {
-                        public const string class_js = "~/Scripts/app/lib/class.js"; 
-                        public const string stub_js = "~/Scripts/app/lib/stub.js"; 
+                        public static readonly string class_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/lib/class.js"); 
+                        public static readonly string stub_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/lib/stub.js"); 
                     }
                 }
                 public static partial class models 
                 {
                     public static class Assets
                     {
-                        public const string snippets_js = "~/Scripts/app/models/snippets.js"; 
+                        public static readonly string snippets_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/models/snippets.js"); 
                     }
                 }
                 public static partial class templates 
@@ -279,7 +279,7 @@ namespace Links
                     {
                         public static class Assets
                         {
-                            public const string snippet_templates_js = "~/Scripts/app/templates/snippet/snippet-templates.js"; 
+                            public static readonly string snippet_templates_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/templates/snippet/snippet-templates.js"); 
                         }
                     }
                     public static class Assets
@@ -290,47 +290,47 @@ namespace Links
                 {
                     public static class Assets
                     {
-                        public const string my_form_snippet_js = "~/Scripts/app/views/my-form-snippet.js"; 
-                        public const string my_form_js = "~/Scripts/app/views/my-form.js"; 
-                        public const string snippet_js = "~/Scripts/app/views/snippet.js"; 
-                        public const string tab_snippet_js = "~/Scripts/app/views/tab-snippet.js"; 
-                        public const string tab_js = "~/Scripts/app/views/tab.js"; 
-                        public const string temp_snippet_js = "~/Scripts/app/views/temp-snippet.js"; 
+                        public static readonly string my_form_snippet_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/views/my-form-snippet.js"); 
+                        public static readonly string my_form_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/views/my-form.js"); 
+                        public static readonly string snippet_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/views/snippet.js"); 
+                        public static readonly string tab_snippet_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/views/tab-snippet.js"); 
+                        public static readonly string tab_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/views/tab.js"); 
+                        public static readonly string temp_snippet_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/views/temp-snippet.js"); 
                     }
                 }
                 public static class Assets
                 {
-                    public const string app_js = "~/Scripts/app/app.js"; 
-                    public const string main_js = "~/Scripts/app/main.js"; 
+                    public static readonly string app_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/app.js"); 
+                    public static readonly string main_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/app/main.js"); 
                 }
             }
             public static class Assets
             {
-                public const string bootstrap_js = "~/Scripts/bootstrap.js"; 
-                public const string bootstrap_min_js = "~/Scripts/bootstrap.min.js"; 
-                public const string jquery_3_1_1_intellisense_js = "~/Scripts/jquery-3.1.1.intellisense.js"; 
-                public const string jquery_3_1_1_js = "~/Scripts/jquery-3.1.1.js"; 
-                public const string jquery_3_1_1_min_js = "~/Scripts/jquery-3.1.1.min.js"; 
-                public const string jquery_3_1_1_slim_js = "~/Scripts/jquery-3.1.1.slim.js"; 
-                public const string jquery_3_1_1_slim_min_js = "~/Scripts/jquery-3.1.1.slim.min.js"; 
-                public const string modernizr_2_8_3_js = "~/Scripts/modernizr-2.8.3.js"; 
-                public const string mustache_js = "~/Scripts/mustache.js"; 
-                public const string r_js = "~/Scripts/r.js"; 
-                public const string require_js = "~/Scripts/require.js"; 
-                public const string text_js = "~/Scripts/text.js"; 
-                public const string underscore_js = "~/Scripts/underscore.js"; 
-                public const string underscore_min_js = "~/Scripts/underscore.min.js"; 
+                public static readonly string bootstrap_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/bootstrap.js"); 
+                public static readonly string bootstrap_min_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/bootstrap.min.js"); 
+                public static readonly string jquery_3_5_1_intellisense_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/jquery-3.5.1.intellisense.js"); 
+                public static readonly string jquery_3_5_1_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/jquery-3.5.1.js"); 
+                public static readonly string jquery_3_5_1_min_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/jquery-3.5.1.min.js"); 
+                public static readonly string jquery_3_5_1_slim_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/jquery-3.5.1.slim.js"); 
+                public static readonly string jquery_3_5_1_slim_min_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/jquery-3.5.1.slim.min.js"); 
+                public static readonly string modernizr_2_8_3_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/modernizr-2.8.3.js"); 
+                public static readonly string mustache_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/mustache.js"); 
+                public static readonly string r_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/r.js"); 
+                public static readonly string require_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/require.js"); 
+                public static readonly string text_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/text.js"); 
+                public static readonly string underscore_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/underscore.js"); 
+                public static readonly string underscore_min_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/underscore.min.js"); 
             }
         }
         public static partial class Content 
         {
             public static class Assets
             {
-                public const string bootstrap_theme_css = "~/Content/bootstrap-theme.css";
-                public const string bootstrap_theme_min_css = "~/Content/bootstrap-theme.min.css";
-                public const string bootstrap_css = "~/Content/bootstrap.css";
-                public const string bootstrap_min_css = "~/Content/bootstrap.min.css";
-                public const string Site_css = "~/Content/Site.css";
+                public static readonly string bootstrap_theme_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap-theme.css");
+                public static readonly string bootstrap_theme_min_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap-theme.min.css");
+                public static readonly string bootstrap_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap.css");
+                public static readonly string bootstrap_min_css = T4MVCHelpers.ProcessAssetPath("~/Content/bootstrap.min.css");
+                public static readonly string Site_css = T4MVCHelpers.ProcessAssetPath("~/Content/Site.css");
             }
         }
     }
@@ -349,8 +349,14 @@ internal static class T4MVCHelpers {
         return path;
     }
 
+    private static string ProcessAssetPathDefault(string virtualPath) {
+        // The path that comes in starts with ~/ and should retain this prefix
+        return virtualPath;
+    }
+
     // Calling ProcessVirtualPath through delegate to allow it to be replaced for unit testing
     public static Func<string, string> ProcessVirtualPath = ProcessVirtualPathDefault;
+    public static Func<string, string> ProcessAssetPath = ProcessAssetPathDefault;
 
     // Calling T4Extension.TimestampString through delegate to allow it to be replaced for unit testing and other purposes
     public static Func<string, string> TimestampString = System.Web.Mvc.T4Extensions.TimestampString;
