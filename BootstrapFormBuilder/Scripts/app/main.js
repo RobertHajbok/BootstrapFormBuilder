@@ -1,7 +1,7 @@
 require.config({
   baseUrl: "Scripts/app/lib/",
   paths: {
-	'jquery': '../../jquery-3.1.1',
+	'jquery': '../../jquery-3.5.1',
 	'mustache' : "../../mustache",
 	'bootstrap' : "../../bootstrap",
 	'underscore' :  "../../underscore",
